@@ -345,20 +345,7 @@ export default function App() {
         </div>
       </div>
 
-      <header style={{
-        position: 'sticky',
-        top: 0,
-        zIndex: 100,
-        background: 'rgba(10, 10, 15, 0.82)',
-        backdropFilter: 'blur(24px) saturate(160%)',
-        WebkitBackdropFilter: 'blur(24px) saturate(160%)',
-        borderBottom: '1px solid var(--border-subtle)',
-        padding: '0 32px',
-        height: 60,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-      }}>
+      <header className="app-header">
         {/* Brand */}
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <span
@@ -494,7 +481,7 @@ export default function App() {
 
       <NavBar />
 
-      <main style={{ maxWidth: 1180, margin: '0 auto', padding: '0 var(--space-4) var(--space-8)', position: 'relative', zIndex: 1 }}>
+      <main className="main-app-container">
 
         {/* ══════════════════════════════════════════════════════════════════════
             DESTINATION 1: HOME (FOCUSED, CLEAN OVERVIEW)
@@ -598,12 +585,7 @@ export default function App() {
             />
 
             {/* Step Navigation Tabs */}
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(2, 1fr)',
-              gap: 16,
-              marginBottom: 24,
-            }}>
+            <div className="grid-responsive-2" style={{ marginBottom: 24 }}>
               <StepperTab
                 stepNumber={1}
                 title="Configure Position & Arm TEE"
